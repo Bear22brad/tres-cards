@@ -1,0 +1,150 @@
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #8B7355;
+}
+
+.card-container {
+  display: flex;
+  gap: 20px;
+  padding: 0 40px;
+}
+
+.card {
+  background-color: #D4C4B7;
+  border-radius: 15px;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+  padding: 20px 30px;
+  width: 300px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 200px;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+  color: inherit;
+}
+
+.card:hover {
+  background-color: #726961;
+  cursor: pointer;
+}
+
+/* Add a content wrapper for the text */
+.card h2,
+.card p {
+  margin: 0; /* Remove default margins */
+}
+
+.card h2 {
+  margin-bottom: 10px; /* Add specific spacing between heading and paragraph */
+}
+
+@media (min-width: 768px) {
+  .card {
+    width: 30%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .card-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 80%;
+    max-width: 400px;
+  }
+}
+
+@media (max-width: 768px) {
+  .card-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 90%;
+    max-width: 350px;
+  }
+}
+
+.card a {
+  margin-top: auto; /* Push link to bottom */
+  text-decoration: none;
+  color: inherit;
+  position: relative;
+  padding-right: 20px;
+}
+
+.card a::after {
+  content: "→";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1em;
+  color: #6b00a5;
+}
+
+.card a:hover {
+  color: #0006bb;
+}
+
+.social-logo {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 10px;
+  object-fit: contain;
+}
+
+.header-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.social-logo {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+}
+
+.card h2 {
+  margin: 0;
+  text-align: right;
+}
+
+.card p {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: auto 0;
+  padding: 0 10px;
+}
+
+.login-text {
+  margin-top: auto;
+  position: relative;
+  padding-right: 20px;
+}
+
+.login-text::after {
+  content: "→";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1em;
+  color: #6b00a5;
+}
